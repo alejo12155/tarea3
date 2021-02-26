@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="estilo.css">
+	<title> teclado</title>
+</head>
+<div class="origen" id="a1" style="color: white; font-size: 80px; font-family: Cambria">Digite un mensaje y Oprima las letras A,B ó C</div>
+<input type="text"  id="mensaje" style=" margin-top: 50px;margin-left: 520px; height: 30px; width: 400px;">	
+
+<body onkeypress="teclado()" style="background-color: #393F45">
+	<script>
+		function teclado()
+		{
+			console.log(event.type);
+			console.log(event.code);
+
+
+
+			if (event.code=="KeyA")
+			 {
+	 			 var x = document.getElementById("a1");
+	 			 x.classList.add('origen2');
+	 			 x.classList.remove('origen');
+	 			 x.classList.remove('origen3');
+	 			 x.classList.remove('origen4');
+	 			var mensaje=document.getElementById('mensaje').value;
+	 			document.getElementById('a1').innerHTML=mensaje;
+
+  				
+			}
+			else
+			{}
+				
+								if (event.code=="KeyB")
+								 {
+			 					 var x1 = document.getElementById("a1");
+	 							 x1.classList.add('origen3');	
+	 							 x1.classList.remove('origen2');
+	 							 x1.classList.remove('origen');
+	 							 x1.classList.remove('origen4');
+	 							 var mensaje=document.getElementById('mensaje').value;
+	 						     document.getElementById('a1').innerHTML=mensaje;
+			 					
+									}
+									else
+									{}
+
+
+								       if (event.code=="KeyC")
+			 					       {
+			 						  		 var x2 = document.getElementById("a1");
+	 			 							x2.classList.add('origen4');
+	 			 							x2.classList.remove('origen');
+	 			 							x2.classList.remove('origen2');
+	 			 							x2.classList.remove('origen3');
+	 			 						    var mensaje=document.getElementById('mensaje').value;
+	 						                document.getElementById('a1').innerHTML=mensaje;
+			 						  		
+									}
+									else
+										{}	
+					
+				
+		}
+	</script>
+
+	
+
+
+	
+		
+		
+	
+
+</body>
+</html>
